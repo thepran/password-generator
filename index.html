@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/7a31ca3e04.js" crossorigin="anonymous"></script>
+  <link rel="shortcut icon" href="#" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Password Generator</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="heading">
+      <h1>Generate a <span>random&nbsp;Password</span></h1>
+      <p>Never use an insecure password again.</p>
+    </div>
+    <div class="filter">
+      <div class="length-element">
+        <p>Password Length&nbsp;:</p>
+        <p id="password-length-el"> </p>
+
+
+        <input type="range" id="password-length" min="8" max="20" />
+
+      </div>
+      <div class="char-filter">
+        <p>Characters used&nbsp;:</p>
+        <fieldset>
+          <label for="lower-case">
+            <input type="checkbox" name="char-set" id="lower-case" value="lower-case" />
+            abc
+          </label>
+          <label for="upper-case">
+            <input type="checkbox" name="char-set" id="upper-case" value="upper-case" />
+            ABC
+          </label>
+          <label for="numbers">
+            <input type="checkbox" name="char-set" id="numbers" value="numbers" />
+            123
+          </label>
+          <label for="symbols">
+            <input type="checkbox" name="char-set" id="symbols" value="symbols" />
+            #$&
+          </label>
+        </fieldset>
+      </div>
+    </div>
+    <button id="generate-btn">Generate passwords</button>
+    <div class="pwd-display">
+      <span class="passwords" id="pwd1"></span>
+      <span class="passwords" id="pwd2"></span>
+    </div>
+    <footer>
+      <div class="social-links">
+        <ul>
+          <li>
+            <a href="https://twitter.com/pranydotin" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="https://github.com/thepran" target="_blank"><i class="fa-brands fa-github"></i></a>
+          </li>
+          <li>
+            <a href="https://codepen.io/thepran" target="_blank"><i class="fa-brands fa-codepen"></i></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
+</html>

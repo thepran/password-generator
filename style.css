@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1f2937;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+.container {
+  padding: 115px 52px;
+  width: 550px;
+}
+.heading h1 {
+  /* font-family: "Karla"; */
+  font-style: normal;
+  font-weight: 800;
+  font-size: 2.5rem;
+  line-height: 40px;
+  letter-spacing: -0.025em;
+  color: #ffffff;
+}
+.heading h1 span {
+  color: #4adf86;
+}
+.heading p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #d5d4d8;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  text-align: justify;
+}
+.filter {
+  color: #fff;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.filter .length-element,
+.filter .char-filter {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+#password-length-el {
+  font-weight: 700;
+}
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 50%;
+  background: transparent;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background-color: #10b981;
+  cursor: pointer;
+  margin-top: -7px;
+  box-shadow: 1px 1px 1px #000, 0 0 1px #0d0d0d;
+}
+input[type="range"]::-moz-range-thumb {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background-color: #10b981;
+  cursor: pointer;
+  border: none;
+  box-shadow: 1px 1px 1px #000, 0 0 1px #0d0d0d;
+}
+input[type="range"]::-moz-range-track {
+  width: 90%;
+  height: 1.9px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #344153;
+  background-color: #55f991;
+  border-radius: 1.3px;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 90%;
+  height: 1.9px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #344153;
+  background-color: #55f991;
+  border-radius: 1.3px;
+}
+input[type="range"]:focus {
+  outline: none;
+}
+input[type="range"]::-ms-track {
+  width: 90%;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+.filter fieldset {
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+#generate-btn {
+  width: 182px;
+  border: none;
+  padding: 9px 15px;
+  background-color: #10b981;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+  margin-bottom: 50px;
+  transition: all 0.3s ease-in-out;
+}
+#generate-btn:hover,
+#generate-btn:active {
+  background-color: #179269;
+  box-shadow: 0px 1px 2px #4f5754a2;
+  cursor: pointer;
+  transform: scale(1.02);
+}
+#generate-btn:disabled,
+#generate-btn[disabled] {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.pwd-display {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 70px;
+}
+.pwd-display::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  position: relative;
+  bottom: 20px;
+  background-color: #2f3e53;
+}
+.pwd-display .passwords {
+  width: 211px;
+  height: 42px;
+  text-align: center;
+  background: #273549;
+  border-radius: 6px;
+  padding: 5px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 32px;
+  color: #55f991;
+}
+
+footer .social-links ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+footer .social-links i {
+  font-size: 1.5rem;
+  color: #d5ddb0;
+  transition: all 0.5s ease-in-out;
+}
+footer .social-links i:hover,
+footer .social-links i:active {
+  transform: scale(1.2);
+}
+
+@media (max-width: 550px) {
+  .container {
+    width: 100%;
+    padding: 100px 8vw;
+    text-align: center;
+  }
+  .heading {
+    text-align: left;
+  }
+  .heading h1 {
+    font-size: 2rem;
+  }
+  .filter .length-element,
+  .filter .char-filter {
+    flex-direction: column;
+  }
+  .filter .length-element p,
+  .filter .char-filter p {
+    margin-bottom: 5px;
+  }
+  .pwd-display .passwords {
+    width: 40vw;
+  }
+}
+@media (min-width: 382px) and (max-width: 550px) {
+  .heading h1 {
+    font-size: 2.5rem;
+  }
+}

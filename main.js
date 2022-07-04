@@ -27,7 +27,7 @@ let characterSet = '' //will store character set from characters checkbox
 
 let passwordLength = (rangeEl.value = 10); //default Password length
 passwordLengthEl.textContent = passwordLength
-console.log(passwordLength)
+
 
 
 /*..........Selecting all the characters set as default option......*/

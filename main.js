@@ -52,7 +52,7 @@ for (let checkbox of charCheckboxes)
 function characterFilter() {
   let checkedCheckbox = document.querySelectorAll('input[type="checkbox"]:checked')
 
-  for (let checkbox of charCheckboxes) {
+  charCheckboxes.forEach(() => {
     if (checkedCheckbox.length === 1) {
       checkedCheckbox[0].disabled = true
     }
@@ -60,7 +60,7 @@ function characterFilter() {
       for (let i = 0; i < checkedCheckbox.length; i++)
         checkedCheckbox[i].disabled = false
     }
-  }
+  })
 }
 
 
